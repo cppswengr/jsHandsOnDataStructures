@@ -4,37 +4,37 @@ var Stack = (() => {
 
     class Stack {
         constructor() {
-            items.set(sKey, [])
+            items.set(sKey, []);
         }
 
-        static push(element) {
+        push(element) {
             let stack = items.get(sKey);
-            Stack.push(element);
+            stack.push(element);
         }
 
-        static pop() {
+        pop() {
             let stack = items.get(sKey);
-            return Stack.pop();
+            return stack.pop();
         }
 
-        static peek() {
+        peek() {
             let stack = items.get(sKey);
             return stack[stack.length - 1];
         }
 
-        static clear() {
+        clear() {
             items.set(sKey, []);
         }
 
-        static size() {
+        size() {
             return items.get(sKey).length;
         }
     }
 
     return Stack;
-}) ();
+})();
 
-const stack = new Stack();
+var stack = new Stack();
 stack.push(10);
 stack.push(20);
 
