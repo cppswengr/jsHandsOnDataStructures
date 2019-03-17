@@ -7,7 +7,7 @@ export class Stack {
   }
 
   push(element) {
-    let statck = this.items.get(this.wmkey);
+    let stack = this.items.get(this.wmkey);
     stack.push(element);
   }
 
